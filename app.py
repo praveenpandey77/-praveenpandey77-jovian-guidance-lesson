@@ -1,6 +1,24 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
+jobs = [
+  {id : 1,
+  'title': 'data-analysis',
+  'location': 'pune',
+  'salary' :  '$4000'
+  },
+  {id : 2,
+   'title': 'data-scientist',
+  'location': 'bangluru',
+  'salary' :  '$5000'
+  },
+  {id :3,
+   'title': 'front-end-engineer',
+  'location': 'hydrabad',
+  'salary' :  '$6000'
+    
+  }
+]
 
 
 @app.route("/")

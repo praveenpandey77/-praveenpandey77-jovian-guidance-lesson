@@ -1,25 +1,52 @@
 <!Doctype html>
 <html>
   <head>
-    <title>getting training at jovian</title>
-    
+    <title>jovian job vacancy</title>
+    <style>
+    h1{
+    font-size : 20;
+    font-family: monospace;
+    color: rgb(70,40,30);
+      text-align : center
+    }
+      #something
+      {
+       width: 100%; 
+        height : 320;
+        object-fit : cover
+      }
+      h2{
+        text-align : center
+      }
+    </style>  
   </head>
 
   <body>
-    <h1>the purpose of trainning to get smart job</h1>
-    <style>
-      h1{
-        font size : 20px
-      }
-    </style>
-    <img src="https://replit.com/@praveenpandey77/web-dev-trial#static/banner.j<jovian></jovian>eight="320"
+    <div>
+    <h1>the purpose of trainning to get smart 
+     job</h1>
+    
+  <img id = "something" src= "https://web-dev-trial.praveenpandey77.repl.co/static/banner.jpg" height ="320">
+
     <h2> about jovian </h2>
+    
     <p> 
     API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other. Each time you use an app like Facebook, send an instant message, or check the weather on your phone, you’re using an API.
     </p>
-
-       
- 
+        <h2>position opened</h2>
+       {%for job in jobs%}
+	     <h4>{{job['id']}}</h4>
+       <h4>{{job['title']}}</h4>
+       <div><b>location :</b> {{job['location']}} 
+         </div>
+        <div><b>salary :</b> {{job['salary']}} 
+        </div>
+       {% endfor %}
+       <p> TODO SHOW THE VACANCIES</p>
+        <div style=  "text-align :center;">
+        <button> contact us</button>
+        </div>
+      </div>
   </body>
 
 
