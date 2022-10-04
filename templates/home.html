@@ -9,6 +9,7 @@
     color: rgb(70,40,30);
       text-align : center
     }
+   
       #something
       {
        width: 100%; 
@@ -33,18 +34,19 @@
     <p> 
     API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other. Each time you use an app like Facebook, send an instant message, or check the weather on your phone, you’re using an API.
     </p>
+      
         <h2>position opened</h2>
-       {%for job in jobs%}
-	     <h4>{{job['id']}}</h4>
-       <h4>{{job['title']}}</h4>
-       <div><b>location :</b> {{job['location']}} 
-         </div>
-        <div><b>salary :</b> {{job['salary']}} 
-        </div>
-       {% endfor %}
-       <p> TODO SHOW THE VACANCIES</p>
+      <div>
+      {% for jobs in jobs %}
+	     {% include 'jobitems.html' %}
+      {%endfor%}
+      
+      </div>
+      
+      
         <div style=  "text-align :center;">
         <button> contact us</button>
+         
         </div>
       </div>
   </body>
